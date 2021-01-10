@@ -1,0 +1,212 @@
+                html {
+                    scroll-behavior: smooth;
+                }
+                
+                body {
+                    min-height: 1000px;
+                }
+                
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    font-family: "Popins", sans-serif;
+                }
+                
+                .intro h3 {
+                    font-weight: 800;
+                    font-size: 24px;
+                }
+                
+                .intro p {
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+                
+                section {
+                    position: relative;
+                    width: 100%;
+                    min-height: 100vh;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: #fff;
+                }
+                
+                img {
+                    vertical-align: middle;
+                    border-style: none;
+                }
+                
+                h3 {
+                    text-align: center;
+                    padding-bottom: 5px;
+                }
+                
+                li {
+                    text-decoration: none;
+                    list-style-type: none;
+                    padding-top: 3px;
+                }
+                
+                .banner {
+                    position: relative;
+                    width: 100%;
+                    min-height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-size: cover;
+                }
+                
+                .banner .content {
+                    max-width: 900px;
+                    text-align: center;
+                }
+                
+                .banner .content h2 {
+                    font-size: 3em;
+                    color: white;
+                }
+                
+                .banner .content p {
+                    font-size: 1em;
+                    color: white;
+                }
+                
+                header {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    padding: 40px 100px;
+                    z-index: 10000;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    transition: 0.5s;
+                }
+                
+                header .logo {
+                    color: white;
+                    font-weight: 700;
+                    font-size: 1.5em;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+                
+                header .logo span {
+                    color: #f7b71d;
+                }
+                
+                header .navigation {
+                    position: relative;
+                    display: flex;
+                }
+                
+                header .navigation li {
+                    list-style-type: none;
+                    margin-left: 30px;
+                }
+                
+                header .navigation li a {
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 300;
+                }
+                
+                header.sticky {
+                    background: white;
+                    padding: 15px 100px;
+                    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+                }
+                
+                header.sticky .logo {
+                    color: black;
+                }
+                
+                header.sticky .navigation li a {
+                    color: black;
+                }
+                
+                header .navigation li a:hover {
+                    color: #f7b71d;
+                }
+                
+                .download li {
+                    list-style: none;
+                    display: inline-block;
+                    margin: 0 20px;
+                    cursor: pointer;
+                    transition: 0.5s;
+                }
+                
+                .download li:hover {
+                    transform: translateY(-15px);
+                }
+                
+                .download li img {
+                    max-width: 100%;
+                }
+                
+                @media screen and (max-width: 991px) {
+                    header,
+                    header.sticky {
+                        padding: 10px 15px;
+                    }
+                    header .navigation {
+                        display: none;
+                    }
+                    header .navigation.active {
+                        width: 100%;
+                        height: 100%;
+                        position: fixed;
+                        top: 68px;
+                        left: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        background: #ffff;
+                    }
+                    header .navigation li a {
+                        text-decoration: none;
+                        color: black;
+                        font-size: 2em;
+                        font-weight: 300;
+                    }
+                    .menuToggle {
+                        position: relative;
+                        width: 40px;
+                        height: 40px;
+                        background: url(assets/images/SP_HamburgerMenu_Sm.scale-150.png);
+                        background-size: 40px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                }
+                
+                footer {
+                    color: white;
+                    padding: 10px;
+                    background-color: black;
+                }
+                
+                footer li {
+                    list-style-type: none;
+                    text-decoration: none;
+                    list-style: none;
+                }
+                
+                footer li a {
+                    color: white;
+                }
+                
+                footer li .icons {
+                    display: inline-block;
+                    size: 5px;
+                }
+                
+                footer li a:hover {
+                    color: #f7b71d;
+                }
