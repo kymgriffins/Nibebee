@@ -4,69 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Sign Up | Firebase Auth</title>
 </head>
-<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
-<link rel="stylesheet" href="assets/css/fontawesome.min.css">
-<link rel="stylesheet" href="assets/css/Navigation-Clean.css">
-<link rel="stylesheet" href="assets/css/styles.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-<body>
-    <section>
-        <div class="container-fluid">
-            <div class="row ">
-                <div class="col-12 text-center">
-                    <h1>Nibebee</h1>
-                </div>
+<body class="bg-light" style="max-height: auto;">
+    <div class="container-fluid">
+        <div class="row mx-1">
+            <div class="col-lg-10 col-md-10 offset-lg-1 offset-md-1 text-center mt-5 pb-4 ">
+                <h1 class="h1"></h1>
             </div>
-            <div class="row">
-                <div class=" col-md-6 col-lg-7  py-5 justify-content-center">
-                    <img src="assets/images/undraw_sign_in_e6hj.svg" alt="" height='auto' width='700'>
-                </div>
-                <div class=" col-md-6 col-lg-5  py-5">
-                    <div id="signup">
-                        <h2 class='text-center'>Sign Up</h2>
-                        <div class="form-group">
-                            <label for="useremail">Email Address<span style="color:red">*</span></label>
-                            <input id="useremail" class="form-control" type="email" onblur="checkuseremail()" placeholder="mail@mail.com" name="">
-                            <small id='useremailerror' class="form-text text-danger ">Please check your login
-                                information</small>
+            <div class="col-lg-10 col-md-10 offset-lg-1 offset-md-1 bg-white  mb-5 ">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 p-4  ">
+                        <img src="assets/images/undraw_authentication_fsn5.svg" width="100%" alt=" Nibebee Signup ">
+                    </div>
+                    <div class="col-lg-6 col-md-6 p-lg-5 p-md-5 px-3 py-4 ">
+                        <div id="signUpForm ">
+                            <h2 class="h2 text-center text-dark mb-3 ">Sign Up</h2>
+                            <div class="form-group "> <label for="userFullName ">Name<span
+                                        class="text-danger ml-1 ">*</span></label> <input type="text " class="form-control " id="userFullName " onblur="checkUserFullName() " placeholder="name "> <small id="userFullNameError " class="form-text text-danger ">This Field must be filled.</small>                                </div>
+                            <div class="form-group "> <label for="userSurname ">Surname<span
+                                        class="text-danger ml-1 ">*</span></label> <input type="text " class="form-control " id="userSurname " onblur="checkUserSurname() " placeholder="surname "> <small id="userSurnameError " class="form-text text-danger ">This Field must be filled.</small>                                </div>
+                            <div class="form-group "> <label for="userEmail ">Email address<span
+                                        class="text-danger ml-1 ">*</span></label> <input type="email " class="form-control " id="userEmail " onblur="checkUserEmail() " placeholder="mail@mail.com "> <small id="userEmailError " class="form-text text-danger ">Please check your email address.</small>                                </div>
+                            <div class="form-group "> <label for="userPassword ">Password<span
+                                        class="text-danger ml-1 ">*</span></label> <input type="password " class="form-control " id="userPassword " onblur="checkUserPassword() " placeholder="********** "> <small id="userPasswordError " class="form-text
+                            text-danger ">Your password must be uppercase, lowercase and more than 10
+                                    characters.</small> </div> <button type="button " class="btn btn-outline-primary text-uppercase mb-3 " onclick="signUp() ">Sign
+                                Up</button>
+                            <p>Already a member? Sign in: <a href="signin.html "><strong
+                                        class="text-primary text-uppercase showSignInForm ">Sign In</strong></a></p>
                         </div>
-                        <div class="form-group">
-                            <label for="useremail">Password<span style="color:red">*</span></label>
-                            <input id="userpassword" class="form-control" type="password" onblur="checkuserpassword()" placeholder="password" name="">
-                            <small id='userpassworderror' class="form-text text-danger ">Please check your login
-                                information</small>
-                        </div>
-                        <button type="button" class='btn btn-outline-primary text-uppercase mb-3' onclick='signin()'>Signin</button>
-                        <p>Not a member yet? Become a member:
-                            <a href="">
-                                <strong class="text-primary text-uppercase"> <br>Sign Up</strong></a>
-                        </p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js "></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js "></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js "></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js "></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js "></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyANOUvd39-B_Qyt4f9nWrEvBoCDr3bAPs4 ",
+            authDomain: "nibebeeapp.firebaseapp.com ",
+            databaseURL: "https://nibebeeapp.firebaseio.com ",
+            projectId: "nibebeeapp ",
+            storageBucket: "nibebeeapp.appspot.com ",
+            messagingSenderId: "112062661001 ",
+            appId: "1:112062661001:web:57a15ccb5a9c2b8aa96158 ",
+            measurementId: "G-TYCH70K6EM "
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <!-- Custom JavaScript -->
+    <script src="assets/js/app.js "></script>
 </body>
-<script>
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-        apiKey: "AIzaSyANOUvd39-B_Qyt4f9nWrEvBoCDr3bAPs4",
-        authDomain: "nibebeeapp.firebaseapp.com",
-        databaseURL: "https://nibebeeapp.firebaseio.com",
-        projectId: "nibebeeapp",
-        storageBucket: "nibebeeapp.appspot.com",
-        messagingSenderId: "112062661001",
-        appId: "1:112062661001:web:57a15ccb5a9c2b8aa96158",
-        measurementId: "G-TYCH70K6EM"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-</script>
 
 </html>
